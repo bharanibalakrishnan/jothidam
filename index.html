@@ -2,10 +2,9 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
+    
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+   
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -16,7 +15,7 @@
 
 <body >
     <div id="main">
-    <div id="mySidenav" class="sidenav bg-light text-dark">
+    <!-- <div id="mySidenav" class="sidenav bg-light text-dark">
         <button class="closebtn btn"  onclick="closeNav()">&times;</button>
         <a onclick="ShowData('jathagam1')">ஆய்வு ஜாதகம் 1</a>
         <a onclick="ShowData('jathagam2')">ஆய்வு ஜாதகம் 2</a>
@@ -73,16 +72,30 @@
         <a onclick="ShowData('jathagam53')">ஆய்வு ஜாதகம் 53</a>
         <a onclick="ShowData('jathagam54')">ஆய்வு ஜாதகம் 54</a>
         <a onclick="ShowData('jathagam55')">ஆய்வு ஜாதகம் 55</a>
-    </div>
+        <a onclick="ShowData('jathagam56')">ஆய்வு ஜாதகம் 56</a>
+        <a onclick="ShowData('jathagam57')">ஆய்வு ஜாதகம் 57</a>
+        <a onclick="ShowData('jathagam58')">ஆய்வு ஜாதகம் 58</a>
+        <a onclick="ShowData('jathagam59')">ஆய்வு ஜாதகம் 59</a>
+        <a onclick="ShowData('jathagam60')">ஆய்வு ஜாதகம் 60</a>
+        <a onclick="ShowData('jathagam61')">ஆய்வு ஜாதகம் 61</a>
+        <a onclick="ShowData('jathagam62')">ஆய்வு ஜாதகம் 62</a>
+        <a onclick="ShowData('jathagam63')">ஆய்வு ஜாதகம் 63</a>
+        <a onclick="ShowData('jathagam64')">ஆய்வு ஜாதகம் 64</a>
+    </div> -->
     <div class="sticky-top">
-    <nav class="navbar navbar-dark bg-light" >
-        <a class="navbar-brand text-dark">ஆய்வு ஜாதகம்</a>
-        <button class="navbar-toggler" onclick="openNav()" style="border: none;outline: none;background:transparent;" type="button">
+    <nav class="navbar justify-content-center bg-light text-center" >
+       <h3>ஆய்வு ஜாதகம்</h3>
+        <!-- <button class="navbar-toggler" onclick="openNav()" style="border: none;outline: none;background:transparent;" type="button">
             <span><img src="img/menu.png" width="30px"></span>
-        </button>
+        </button> -->
         </nav>
     </div>
     <br/>
+    <div class="container form-group">
+        <select class="form-control" id="opt">
+            
+        </select>
+    </div>
     <div id="content">
 
     </div>
@@ -94,19 +107,32 @@
     </div>
     
     <script>
-        
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-        }
-        $('#content').load("jathagam/jathagam1.html");
-        function ShowData(page) {
+        var opt;
+        $('#opt').change(function()
+        {
+            var page=$('#opt').val();
+            alert(page);
             var path="jathagam/"+page+".html";
+            alert(path);
             $('#content').load(path);
+        });
+        for(var i=1;i<=94;i++)
+        {
+            opt+='<option value="jathagam'+i+'">ஆய்வு ஜாதகம் '+i+'</option>';
         }
+        $('#opt').html(opt);
+        // function openNav() {
+        //   document.getElementById("mySidenav").style.width = "250px";
+        // }
+        
+        // function closeNav() {
+        //   document.getElementById("mySidenav").style.width = "0";
+        // }
+        // $('#content').load("jathagam/jathagam2.html");
+        // function ShowData(page) {
+        //     var path="jathagam/"+page+".html";
+        //     $('#content').load(path);
+        // }
     </script>
     
 </body>
