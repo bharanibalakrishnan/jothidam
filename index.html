@@ -83,24 +83,24 @@
         <a onclick="ShowData('jathagam64')">ஆய்வு ஜாதகம் 64</a>
     </div> -->
     <div class="sticky-top">
-    <nav class="navbar justify-content-center bg-light text-center" >
-       <h3>ஆய்வு ஜாதகம்</h3>
-        <!-- <button class="navbar-toggler" onclick="openNav()" style="border: none;outline: none;background:transparent;" type="button">
-            <span><img src="img/menu.png" width="30px"></span>
-        </button> -->
-        </nav>
-    </div>
-    <br/>
-    <div class="container form-group">
+    <nav class="navbar justify-content-center  text-center alert-warning" >
+       <h4 >பரனிபாலகிருஷ்ணன் </h4>
+       <h5>வழங்கும்</h5>
+       <div class="container form-group">
         <select class="form-control" id="opt">
             
         </select>
     </div>
+    </nav>
+    
+    </div>
+    <br/>
+    
     <div id="content">
 
     </div>
     <br/>
-    <div class="footer bg-light ">
+    <div class="footer alert-warning ">
         ஸ்ரீ ஹரி ஹரன் வடிவமைத்தார்
 
     </div>
@@ -121,18 +121,9 @@
             opt+='<option value="jathagam'+i+'">ஆய்வு ஜாதகம் '+i+'</option>';
         }
         $('#opt').html(opt);
-        // function openNav() {
-        //   document.getElementById("mySidenav").style.width = "250px";
-        // }
         
-        // function closeNav() {
-        //   document.getElementById("mySidenav").style.width = "0";
-        // }
-        // $('#content').load("jathagam/jathagam2.html");
-        // function ShowData(page) {
-        //     var path="jathagam/"+page+".html";
-        //     $('#content').load(path);
-        // }
+        $('#content').load("jathagam/jathagam2.html");
+        
     </script>
     
 </body>
